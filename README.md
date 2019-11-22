@@ -6,8 +6,7 @@
 |password|string|null: false|
 |nickname|string|null: false|
 ### Association
-- has_many :tweets
-- has_many :comments
+- has_many :message
 
 ## messageテーブル
 |Column|Type|Options|
@@ -16,8 +15,8 @@
 |text|text||
 |user_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :user
-- has_many :comments
+- belongs_to :users
+- has_many :message
 
 ## groupテーブル
 |Column|Type|Options|
