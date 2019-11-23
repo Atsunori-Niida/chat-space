@@ -6,7 +6,8 @@
 |password|string|null: false|
 |nickname|string|null: false|
 ### Association
-- has_many :message
+- has_many :messages
+- has_many :messages, through: :groups
 
 ## messageテーブル
 |Column|Type|Options|
@@ -16,17 +17,14 @@
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :users
-- has_many :message
+- has_many :users, through: :groups
 
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text||
-|image|string||
-|group_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
+|name|integer|index: true|
 ### Association
-- has_many :group
+- has_many :users, through: ：messages
 
 ## group-usersテーブル
 |Column|Type|Options|
