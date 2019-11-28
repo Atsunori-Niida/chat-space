@@ -1,0 +1,96 @@
+.chat_main {
+  float: left;
+  width: calc(100vw - 300px);
+  .main_header{
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px #eee;
+    overflow: scroll;
+  .main_header_title{
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  .main_header_member{
+    display: flex;
+    font-size: 12px;
+    color: #999999;
+  }
+  .main_header_box{
+    margin-top: 35px;
+  }
+  .main_header_btn{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    margin-top: 30px;
+    border: solid 1px #38aef0;
+    position: absolute;
+    right: 40px;
+  }
+
+ }
+ .main_chat{
+  height: 438px;
+  padding: 46px 40px;
+  background-color: #fafafa;
+  overflow: scroll;
+ }
+ .main_message{
+   display: flex;
+   margin-bottom: 10px;
+ }
+ .main_message_name{
+  color: #434a54;
+  font-size: 16px;
+  font-weight: bold;
+}
+.main_message_time{
+    color: #999999;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.main_message_comment{
+  color: #434a54;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.main_footer{
+  background-color: #DDDDDD;
+    box-sizing: border-box;
+    height: 89px;
+    padding: 20px 50px 20px 40px;
+}
+.form_text_box_big{
+  display: flex;
+}
+.form_text{
+  height: 48px;
+  width: 100%;
+}
+.form_text_box{
+  position: relative;
+}
+.form__submit{
+  width: 100px;
+  height: 50px;
+  padding: 0 30px;
+  margin-left: 15px;
+  background-color: #38aef0;
+  color: white;
+  cursor: pointer;   
+}
+.form__mask__image{
+  input {
+    display: none;   
+}
+  font-size: 1.3rem;
+  position: absolute;
+  top: 10px;
+  right: 130px;
+  cursor: pointer;
+}
+}
+
