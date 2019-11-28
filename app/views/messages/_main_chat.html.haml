@@ -1,0 +1,28 @@
+.chat_main
+  .main_header
+    .main_header_box
+      .main_header_leftbox
+        %h2.main_header_title
+          ワンピース
+        %ul.main_header_member
+          Member : 
+    = link_to "#" do
+      .main_header_btn
+        Edit
+  .main_chat
+    .main_message
+      %p.main_message_name
+        jjj
+      %p.main_message_time
+        2019/11/27(Wed) 16:46:28
+    .main_message_com
+      %p.main_message_comment
+        ok google
+  .main_footer
+    .form_text_box_big
+      %input.form_text
+      .form_text_box
+        .form__mask__image
+          = icon('fa','image',class: 'icon')
+          %input.hidden{type: 'file'}      
+        %input.form__submit{type: 'submit', value: 'Send'}
