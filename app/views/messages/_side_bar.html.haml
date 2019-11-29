@@ -6,24 +6,16 @@
         name
       %ul.side_header_menu
         %li.side_header__edit
-          = link_to "#" do
+          = link_to new_group_path do
             = icon('fas', 'edit',  class: "side__header__icon--btn")
         %li.side_header__setting
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog',  class: "side__header__icon--btn")
   .groups
-    .group
-      .group__name
-        kiiii
-      .group__message
-        kiiiii
-    .group
-      .group__name
-        meeeee
-      .group__message
-        meeeee
-    .group
-      .group__name
-        leeeee
-      .group__message
-        leeeee
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
