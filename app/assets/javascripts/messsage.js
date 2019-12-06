@@ -21,12 +21,8 @@ $(function(){
   };
 
 $('#new_message').on('submit', function(e){
-  // console.log(this)
  e.preventDefault();
  var formData = new FormData(this);
-//  console.log(formData)
- var url = $(this).attr('action')
-//  console.log(url)
  $.ajax({
    url: url,
    type: 'POST',
@@ -36,10 +32,8 @@ $('#new_message').on('submit', function(e){
    contentType: false
  })
   .done(function(message){
-    // console.log(message)
     var html = buildHTML(message);
     $(".main_chat").append(html);
-    // console.log(html)
     $('.main_chat').animate({scrollTop: $('.main_chat')[0].scrollHeight}, 'fast');         
     $('#new_message')[0].reset();
     $('.form__submit').prop('disabled', false);
@@ -56,7 +50,6 @@ var reloadMessages = function () {
   
 if (window.location.href.match(/\/groups\/\d+\/messages/)){
   var last_message_id = $('.message:last').data("message-id");
-  console.log(last_message_id)
   $.ajax({
     url: 'api/messages',
     type: 'get',
@@ -64,7 +57,6 @@ if (window.location.href.match(/\/groups\/\d+\/messages/)){
     dataType: 'json'
   })
   .done(function(messages) {
-    console.log(messages)
     var insertHTML = '';
     messages.forEach(function(message){
       insertHTML = buildHTML(message)
@@ -73,7 +65,7 @@ if (window.location.href.match(/\/groups\/\d+\/messages/)){
     $('.main_chat').animate({scrollTop: $('.main_chat')[0].scrollHeight}, 'fast');
   })
   .fail(function() {
-    // alert('メッセージ送信に失敗しました');
+    alert('メッセージ送信に失敗しました');
   });
 };
 }
