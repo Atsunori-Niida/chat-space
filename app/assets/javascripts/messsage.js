@@ -21,8 +21,10 @@ $(function(){
   };
 
 $('#new_message').on('submit', function(e){
+
  e.preventDefault();
  var formData = new FormData(this);
+ var url = $(this).attr('action')
  $.ajax({
    url: url,
    type: 'POST',
@@ -32,6 +34,7 @@ $('#new_message').on('submit', function(e){
    contentType: false
  })
   .done(function(message){
+
     var html = buildHTML(message);
     $(".main_chat").append(html);
     $('.main_chat').animate({scrollTop: $('.main_chat')[0].scrollHeight}, 'fast');         
@@ -45,8 +48,6 @@ $('#new_message').on('submit', function(e){
   return false;
 });
 var reloadMessages = function () {
-  
-  
   
 if (window.location.href.match(/\/groups\/\d+\/messages/)){
   var last_message_id = $('.message:last').data("message-id");
