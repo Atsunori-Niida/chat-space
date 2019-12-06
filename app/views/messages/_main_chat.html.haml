@@ -12,14 +12,7 @@
         = link_to "Edit", edit_group_path(params[:group_id]), method: :get
   .main_chat
     = render @messages
-    .main_message
-      %p.main_message_name
-        jjj
-      %p.main_message_time
-        2019/11/27(Wed) 16:46:28
-    .main_message_com
-      %p.main_message_comment
-        ok google
+         
   .form
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'form__message', placeholder: 'type a message'
