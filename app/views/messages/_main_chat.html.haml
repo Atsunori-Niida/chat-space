@@ -9,7 +9,7 @@
             = user.name
     = link_to "#" do
       .main_header_btn
-        = link_to "Edit", edit_group_path(params[:group_id]), method: :get
+        = link_to "Edit", edit_group_path(params[:group_id]), class:"right-header__btn", method: :get
   .main_chat
     = render @messages
          
