@@ -62,8 +62,8 @@ if (window.location.href.match(/\/groups\/\d+\/messages/)){
     messages.forEach(function(message){
       insertHTML = buildHTML(message)
       $('.main_chat').append(insertHTML);
-    })
-    $('.main_chat').animate({scrollTop: $('.main_chat')[0].scrollHeight}, 'fast');
+      $('.main_chat').animate({scrollTop: $('.main_chat')[0].scrollHeight}, 10);
+    }) 
   })
   .fail(function() {
     alert('メッセージ送信に失敗しました');
